@@ -1,3 +1,6 @@
+# 自定义属性
+prefix: begin++
+
 # 配置dev环境
 server:
   port: 8180

@@ -1,3 +1,6 @@
+# 自定义属性
+suffix: ++end
+
 # 配置dev环境
 server:
   port: 8190
