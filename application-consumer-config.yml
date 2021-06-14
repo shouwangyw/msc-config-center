@@ -16,7 +16,13 @@ eureka:
 feign:
   hystrix:
     enabled: true
-
+  client:
+    config:
+      default:
+        # 指定Feign连接提供者的超时时限，决定于网络状况
+        connectTimeout: 5000
+        # 指定Feign从请求到获取提供者响应的超时时限，决定于提供者的处理时间
+        readTimeout: 5000
 ---
 # 配置test环境
 server:
@@ -33,3 +39,10 @@ eureka:
 feign:
   hystrix:
     enabled: true
+  client:
+    config:
+      default:
+        # 指定Feign连接提供者的超时时限，决定于网络状况
+        connectTimeout: 5000
+        # 指定Feign从请求到获取提供者响应的超时时限，决定于提供者的处理时间
+        readTimeout: 5000
