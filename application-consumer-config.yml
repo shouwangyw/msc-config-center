@@ -1,0 +1,32 @@
+# 配置dev环境
+server:
+  port: 8180
+spring:
+  profiles: dev
+  application:
+    name: msc-consumer-depart
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8400.com:8400/eureka
+# 开启Feign对Hystrix的支持
+feign:
+  hystrix:
+    enabled: true
+
+---
+# 配置test环境
+server:
+  port: 8280
+spring:
+  profiles: test
+  application:
+    name: msc-consumer-depart
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8500.com:8500/eureka
+# 开启Feign对Hystrix的支持
+feign:
+  hystrix:
+    enabled: true
