@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+
+---
+# 开发环境
+spring:
+  application:
+    name: msc-config-dev
+  profiles: dev
+
+---
+# 测试环境
+spring:
+  application:
+    name: msc-config-test
+  profiles: test
