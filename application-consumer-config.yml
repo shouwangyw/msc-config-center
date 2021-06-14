@@ -23,6 +23,14 @@ feign:
         connectTimeout: 5000
         # 指定Feign从请求到获取提供者响应的超时时限，决定于提供者的处理时间
         readTimeout: 5000
+# 设置服务熔断时限
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
 ---
 # 配置test环境
 server:
@@ -46,3 +54,11 @@ feign:
         connectTimeout: 5000
         # 指定Feign从请求到获取提供者响应的超时时限，决定于提供者的处理时间
         readTimeout: 5000
+# 设置服务熔断时限
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
